@@ -1,14 +1,6 @@
 import AddtoCartIcon from "../assets/icons/buyy.svg"
 
-const ListItem = () =>{
-
-    // will be fetching data from this data object
-    const data = {
-        discountedPrice:340,
-        price:450,
-        title:"Title of the Item",
-        thumbnail:"cart.png"
-    }
+const ListItem = ({data}) =>{
 
     return (
         <div className={"item-card"}>
