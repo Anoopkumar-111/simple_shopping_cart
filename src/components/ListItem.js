@@ -1,19 +1,28 @@
 import AddtoCartIcon from "../assets/icons/buyy.svg"
 
 const ListItem = () =>{
+
+    // will be fetching data from this data object
+    const data = {
+        discountedPrice:340,
+        price:450,
+        title:"Title of the Item",
+        thumbnail:"cart.png"
+    }
+
     return (
         <div className={"item-card"}>
-            <img className={"img-fluid"} src="assets\cart.png" alt="Some title"/>
+            <img className={"img-fluid"} src={`/assets/${data.thumbnail}`} alt={data.title}/>
             <div className={"item-card__information"} >
                 <div className={"pricing"}>
-                    <span>₹340</span>
+                    <span>₹{data.discountedPrice}</span>
                     <small>
-                        <strike>450 </strike>
+                        <strike>₹{data.price}</strike>
                     </small>
                 </div>
 
                 <div className={"title"}>
-                    <h3>Title of the Item</h3>
+                    <h3>{data.title}</h3>
                 </div>
             </div>
 
