@@ -1,4 +1,5 @@
-import AddtoCartIcon from "../assets/icons/buyy.svg"
+
+import AddtoCartIcon from "../../../assets/icons/buyy.svg"
 
 const ListItem = ({data}) =>{
 
