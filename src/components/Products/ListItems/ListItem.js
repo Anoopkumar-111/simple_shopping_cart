@@ -19,7 +19,7 @@ const ListItem = ({data}) =>{
                 </div>
             </div>
 
-            <button className={"cart-add"}>
+            <button className={"cart-add"} onClick={()=>{console.log("Clicked ",data)}}>
                 <span>Add to Cart</span>
                 <img src={AddtoCartIcon} alt ="add to cart" />
             </button>
