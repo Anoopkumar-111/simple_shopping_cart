@@ -1,4 +1,5 @@
 
+import CounterItem from "./ListItems/CounterItem"
 import ListItem from "./ListItems/ListItem"
 
 const items = [
@@ -25,6 +26,7 @@ const Products = () => {
 
                 <ListItem data={items[0]}></ListItem>
                 <ListItem data={items[1]}></ListItem>
+                <CounterItem data= {items[0]}/>
 
             </div>
         </div>

@@ -2,7 +2,7 @@
 import AddtoCartIcon from "../../../assets/icons/buyy.svg"
 import { useState } from "react"
 
-const ListItem = ({data}) =>{
+const CounterItem = ({data}) =>{
 
     // let message = "Not added to the Cart"
 
@@ -13,6 +13,25 @@ const ListItem = ({data}) =>{
         setMessage("Added to the Cart")
         console.log("Clicked!",message)
     }
+
+    const[value,setValue]=useState(0);
+
+    const onAdd=()=>{
+        setMessage("Added to your Cart !")
+        setValue(value+1);
+        console.log(value);
+    }
+
+    const onSub=()=>{
+        if(value<=0){
+            setMessage("Not Added to the Cart ")
+            return;
+        }
+        setValue(value-1);
+        console.log(value);
+    }
+
+    
 
 
     return (
@@ -32,12 +51,19 @@ const ListItem = ({data}) =>{
             </div>
 
             <small className="cart-message">{message}</small>
-            <button className={"cart-add"} onClick={handleClick}>
-                <span>Add to Cart</span>
+
+            <button className={"cart-add"} onClick={onAdd}>
+                <span>Add + +</span>
                 <img src={AddtoCartIcon} alt ="add to cart" />
             </button>
+            <div>Value is {value}</div>
+            <button className={"cart-add"} onClick={onSub}>
+                <span>Sub - -</span>
+                <img src={AddtoCartIcon} alt ="add to cart" />
+            </button>
+
         </div>
     )
 }
 
-export default ListItem
+export default CounterItem
