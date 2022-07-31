@@ -1,5 +1,6 @@
 import Header from "./components/Layout/Header";
 import SubHeader from "./components/Layout/SubHeader";
+import FormProducts from "./components/Products/FormProduct";
 import Products from "./components/Products/Products";
 
 
@@ -8,6 +9,7 @@ const App=()=>{
     <div >
       <Header/>
       <SubHeader/>
+      <FormProducts/>
       <Products/>
     </div>
   );

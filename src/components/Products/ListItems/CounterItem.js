@@ -46,6 +46,7 @@ const CounterItem = ({data}) =>{
                 </div>
 
                 <div className={"title"}>
+                    <h3>Use of useState Hook</h3>
                     <h3>{data.title}</h3>
                 </div>
             </div>
